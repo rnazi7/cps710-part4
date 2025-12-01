@@ -1,0 +1,17 @@
+// integer comparisons
+if 1<1 then println "1<1"; fi;
+if 1<2 then println "1<2"; fi;
+if 2<1 then println "2<1"; fi;
+if 1<=1 then println "1<=1"; fi;
+if 1<=2 then println "1<=2"; fi;
+if 2<=1 then println "2<=1"; fi;
+if 1>1 then println "1>1"; fi;
+if 1>2 then println "1>2"; fi;
+if 2>1 then println "2>1"; fi;
+if 1>=1 then println "1>=1"; fi;
+if 1>=2 then println "1>=2"; fi;
+if 2>=1 then println "2>=1"; fi;
+if 1==1 then println "1==1"; fi;
+if 1==2 then println "1==2"; fi;
+if 1!=2 then println "1!=2"; fi;
+if 1!=1 then println "1!=1"; fi;

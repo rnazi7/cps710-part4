@@ -1,0 +1,5 @@
+./t intprint
+./t if
+./t intops
+./t comparisons
+./t bools

@@ -1,0 +1,32 @@
+// test if statement
+if #1 then
+	println "then clause works";
+else
+	println "then clause does not work";
+fi;
+
+if #0 then
+	println "else clause does not work";
+else
+	println "else clause works";
+fi;
+
+if #0 then
+	println "elif clause does not work";
+elif #0 then
+	println "elif clause does not work";
+elif #1 then
+	println "elif clause works";
+else
+	println "elif clause does not works";
+fi;
+
+if #0 then
+	println "else clause in elif does not work";
+elif #0 then
+	println "else clause in elif does not work";
+elif #0 then
+	println "else clause in elif does not work";
+else
+	println "else clause in elif works";
+fi;

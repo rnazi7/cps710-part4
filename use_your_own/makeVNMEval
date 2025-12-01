@@ -1,0 +1,4 @@
+VNMEval.java: VNM.jjt
+	jjtree VNM.jjt
+	javacc AST/VNM.jj
+	sed s/VNMDefaultVisitor/VNMEval/ < AST/VNMDefaultVisitor.java > VNMEval.java

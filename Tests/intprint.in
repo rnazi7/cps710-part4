@@ -1,0 +1,12 @@
+// Evaluation of strings, numbers, print, println, strings, and boolean constants
+1024;
+
+print "The print statement will now print integers ";
+print 2048;
+print ", ";
+println 4096;
+println "This should be on a new line. ";
+println "Now we will give println multiple parameters:",1,2,3,4;
+print "Now we will give print multiple parameters:",5,6,7,8;
+println;
+

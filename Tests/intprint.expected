@@ -1,0 +1,5 @@
+1024
+The print statement will now print integers 2048, 4096
+This should be on a new line. 
+Now we will give println multiple parameters:1234
+Now we will give print multiple parameters:5678
