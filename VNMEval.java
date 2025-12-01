@@ -20,7 +20,7 @@ public class VNMEval implements VNMVisitor {
     return defaultVisit(node, data);
   }
 
-  // --- PRINTING ---
+  // Printing
 
   public Object visit(ASTPrint node, Object data) throws Exception {
     int num = node.jjtGetNumChildren();
@@ -46,7 +46,7 @@ public class VNMEval implements VNMVisitor {
     return null;
   }
 
-  // --- MATH OPERATIONS ---
+  // Math Operations
 
   public Object visit(ASTsum node, Object data) throws Exception {
     // loop through all children to support multiple additions
@@ -89,7 +89,7 @@ public class VNMEval implements VNMVisitor {
     return node.jjtGetChild(0).jjtAccept(this, data);
   }
 
-  // --- LOGIC GATES ---
+  // Logic Gates
 
   public Object visit(ASTor node, Object data) throws Exception {
     int num = node.jjtGetNumChildren();
@@ -114,7 +114,7 @@ public class VNMEval implements VNMVisitor {
     return !val;
   }
 
-  // --- CONTROL FLOW ---
+  // Control Flow
 
   public Object visit(ASTIf node, Object data) throws Exception {
     // first child is always condition
@@ -139,7 +139,7 @@ public class VNMEval implements VNMVisitor {
     return null;
   }
 
-  // --- COMPARISONS ---
+  // Comparisons
 
   public Object visit(ASTcomparison node, Object data) throws Exception {
     int left = getInt(node.jjtGetChild(0).jjtAccept(this, data));
@@ -165,7 +165,7 @@ public class VNMEval implements VNMVisitor {
   public Object visit(ASTeq n, Object d) throws Exception { return null; }
   public Object visit(ASTneq n, Object d) throws Exception { return null; }
 
-  // --- LITERALS ---
+  // Literals
 
   public Object visit(ASTnumber node, Object data) throws Exception {
     Object val = node.jjtGetValue();
@@ -186,7 +186,7 @@ public class VNMEval implements VNMVisitor {
   public Object visit(ASTTRUE node, Object data) throws Exception { return true; }
   public Object visit(ASTFALSE node, Object data) throws Exception { return false; }
 
-  // --- IGNORED NODES (just pass through) ---
+  // Ignore nodes, just pass through
   
   public Object visit(ASTbody n, Object d) throws Exception { return defaultVisit(n, d); }
   public Object visit(ASTclause n, Object d) throws Exception { return defaultVisit(n, d); }
